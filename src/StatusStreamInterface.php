@@ -1,6 +1,6 @@
 <?php
 
-namespace Cascade\StatusStream;
+namespace CascadeEnergy\StatusStream;
 
 interface StatusStreamInterface
 {

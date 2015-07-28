@@ -11,7 +11,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Cascade\\StatusStream\\": "src/"
+      "CascadeEnergy\\StatusStream\\": "src/"
     }
   }
 }
