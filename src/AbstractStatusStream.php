@@ -4,10 +4,17 @@ namespace CascadeEnergy\StatusStream;
 
 abstract class AbstractStatusStream implements StatusStreamInterface
 {
-    protected $component;
-    protected $processId;
-    protected $subsystem;
-    protected $system;
+    /** @var string The lowest level identifier for the system the process belongs to */
+    protected $component = '';
+
+    /** @var string The unique ID for this particular instance of a process */
+    protected $processId = '';
+
+    /** @var string The mid-level identifier for the system the process belongs to */
+    protected $subsystem = '';
+
+    /** @var string The highest level identifier for the system the process belongs to */
+    protected $system = '';
 
     /**
      * Sets the unique identifier for the process. This may be as simple as an OS-level process ID, or a more complex
