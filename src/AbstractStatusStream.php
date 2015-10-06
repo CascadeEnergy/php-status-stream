@@ -16,6 +16,9 @@ abstract class AbstractStatusStream implements StatusStreamInterface
     /** @var string The highest level identifier for the system the process belongs to */
     protected $system = '';
 
+    /** @var string The current version of the system -> subsystem -> component this process represents */
+    protected $version = '';
+
     /**
      * Sets the unique identifier for the process. This may be as simple as an OS-level process ID, or a more complex
      * string based on combinations of information such as a machine name, a container ID, and a process ID.
@@ -43,5 +46,15 @@ abstract class AbstractStatusStream implements StatusStreamInterface
         $this->system = $system;
         $this->subsystem = $subsystem;
         $this->component = $component;
+    }
+
+    /**
+     * Sets the version number / version string to be included with all status updates.
+     *
+     * @param string $version
+     */
+    public function setVersion($version)
+    {
+        $this->version = $version;
     }
 }

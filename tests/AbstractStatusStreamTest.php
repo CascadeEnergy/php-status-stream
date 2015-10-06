@@ -29,4 +29,11 @@ class AbstractStatusStreamTest extends \PHPUnit_Framework_TestCase
         $this->assertAttributeEquals('bar', 'subsystem', $this->statusStream);
         $this->assertAttributeEquals('baz', 'component', $this->statusStream);
     }
+
+    public function testItShouldAllowTheVersionToBeSet()
+    {
+        $this->statusStream->setVersion('1.2.3');
+
+        $this->assertAttributeEquals('1.2.3', 'version', $this->statusStream);
+    }
 }

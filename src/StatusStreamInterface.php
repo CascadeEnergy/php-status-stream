@@ -26,6 +26,13 @@ interface StatusStreamInterface
     public function setSystemId($system, $subsystem = '', $component = '');
 
     /**
+     * Sets the version number / version string to be included with all status updates.
+     *
+     * @param string $version
+     */
+    public function setVersion($version);
+
+    /**
      * Updates the current state to `active`, possibly with some context data
      *
      * @param mixed|null $context

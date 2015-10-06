@@ -1,5 +1,5 @@
 {
-  "name": "CascadeEnergy/php-status-stream",
+  "name": "cascade-energy/php-status-stream",
   "description": "Base interface for streams of status information",
   "minimum-stability": "stable",
   "license": "MIT",
